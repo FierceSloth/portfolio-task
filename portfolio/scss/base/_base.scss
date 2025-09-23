@@ -6,15 +6,11 @@ body {
   line-height: 24px;
 }
 
-.container {
-  background-color: $white;
-}
-
-.container-dark {
+.dark {
   background-color: $dark;
 }
 
-@mixin container {
+.container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;

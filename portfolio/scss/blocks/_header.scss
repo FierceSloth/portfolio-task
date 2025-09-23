@@ -1,16 +1,8 @@
-header {
-  @include container;
-  background-color: $dark;
+.container-header {
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.header__logo {
-}
-
-.header__nav {
 }
 
 .header__list {

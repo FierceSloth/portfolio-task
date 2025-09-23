@@ -1,0 +1,122 @@
+.hero {
+  height: 862px;
+  display: block;
+}
+
+.container-hero {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 40px;
+  color: $white;
+}
+
+.hero__side__arrow {
+  @extend %small;
+  writing-mode: tb-rl;
+  transform: rotate(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding-left: 23px;
+
+  span {
+    display: block;
+    width: 1px;
+    height: 550px;
+    background-color: $white;
+  }
+}
+
+.hero__main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  max-width: 740px;
+}
+
+.hero-main {
+  margin: 160px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 40px;
+}
+
+.hero__stat-container {
+  display: flex;
+  gap: 60px;
+  span {
+    width: 27px;
+  }
+}
+
+.hero__stat-item {
+  @extend %decoration;
+  display: flex;
+}
+
+.hero__stat-text {
+  @extend %base;
+  text-transform: none;
+  margin-top: 8px;
+}
+
+.scroll__container {
+  display: flex;
+  gap: 8px;
+
+  path {
+    transition: stroke 0.2s;
+  }
+
+  .hero__scroll {
+    transition: color 0.2s;
+  }
+
+  &:hover {
+    path {
+      stroke: $accent;
+    }
+
+    .hero__scroll {
+      @extend %accent-text;
+    }
+  }
+}
+
+.hero__second__img {
+  display: flex;
+  align-items: center;
+}
+
+.hero__second__img {
+  width: 220px;
+  height: 220px;
+  aspect-ratio: 1/1;
+  align-self: center;
+}
+
+.hero__main__container {
+  width: 280px;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.hero__main__img img {
+  width: 280px;
+  height: auto;
+  aspect-ratio: 3/4;
+  align-self: stretch;
+}
+
+.hero__intro {
+  @extend %base;
+  text-align: right;
+  width: 220px;
+}
