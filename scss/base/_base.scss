@@ -1,10 +1,23 @@
-body,
-.base {
+body {
   font-family: Mulish;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+}
+
+.container {
+  background-color: $white;
+}
+
+.container-dark {
+  background-color: $dark;
+}
+
+@mixin container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 h1 {
@@ -43,7 +56,24 @@ h4 {
   text-transform: uppercase;
 }
 
-.decoration {
+%base {
+  font-family: Mulish;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+%base-component {
+  font-family: Oswald;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  text-transform: uppercase;
+}
+
+%decoration {
   font-family: Oswald;
   font-size: 48px;
   font-style: normal;
@@ -52,7 +82,7 @@ h4 {
   text-transform: uppercase;
 }
 
-.small {
+%small {
   font-family: Mulish;
   font-size: 12px;
   font-style: normal;
@@ -60,7 +90,7 @@ h4 {
   line-height: 16px; /* 133.333% */
 }
 
-.base__italic {
+%base-italic {
   font-family: Mulish;
   font-size: 16px;
   font-style: italic;
@@ -68,11 +98,19 @@ h4 {
   line-height: 20px;
 }
 
-.accent__text:hover {
-  color: $accent;
+%accent-text {
+  transition: all 0.2s;
+
+  &:hover {
+    color: $accent;
+  }
 }
 
-.accent__btn:hover {
-  color: $dark;
-  background-color: $accent;
+%accent-btn {
+  transition: all 0.2s;
+
+  &:hover {
+    color: $dark;
+    background-color: $accent;
+  }
 }
