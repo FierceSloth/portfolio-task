@@ -142,10 +142,10 @@ h4 {
   line-height: 16px; /* 133.333% */
 }
 
-.scroll__container:hover .hero__scroll, .header__list .list-link {
+.header__list .list-link {
   transition: all 0.2s;
 }
-.scroll__container:hover .hero__scroll:hover, .header__list .list-link:hover {
+.header__list .list-link:hover {
   color: #FF3C3C;
 }
 
@@ -230,6 +230,7 @@ h4 {
 }
 
 .scroll__container {
+  width: 120px;
   display: flex;
   gap: 8px;
 }
@@ -239,9 +240,13 @@ h4 {
 .scroll__container .hero__scroll {
   transition: color 0.2s;
 }
-.scroll__container:hover path {
+.scroll__container:hover .scroll-path {
   stroke: #FF3C3C;
 }
+.scroll__container:hover .hero__scroll {
+  color: #FF3C3C;
+}
+
 .hero__second__img {
   display: flex;
   align-items: center;
@@ -273,4 +278,31 @@ h4 {
 .hero__intro {
   text-align: right;
   width: 220px;
+}
+
+.about {
+  min-height: 628px;
+}
+
+.container-about {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 20px;
+}
+
+.about-block {
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.about-block img {
+  width: 100%;
+}
+
+.about__title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }/*# sourceMappingURL=main.css.map */
