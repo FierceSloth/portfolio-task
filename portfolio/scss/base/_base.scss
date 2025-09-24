@@ -16,6 +16,10 @@ body {
   padding: 0 20px;
 }
 
+p {
+  @extend %base;
+}
+
 h1 {
   font-family: Oswald;
   font-size: 116px;
