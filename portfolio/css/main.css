@@ -113,7 +113,15 @@ h4 {
   text-transform: uppercase;
 }
 
-.hero__intro, .hero__stat-text, p {
+input::-moz-placeholder {
+  font-family: Mulish;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   font-family: Mulish;
   font-size: 16px;
   font-style: normal;
@@ -561,4 +569,44 @@ summary:hover {
   [open]::details-content {
     height: auto;
   }
+}
+.container-input {
+  width: 100%;
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.form-container {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.form-container input {
+  font-family: "Oswald", sans-serif;
+  border: 1px solid #222222;
+  width: 380px;
+  display: flex;
+  height: 60px;
+  max-width: 380px;
+  padding: 0 12px;
+}
+
+input::-moz-placeholder {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+input::placeholder {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+.contact-btn {
+  min-width: 272px;
 }/*# sourceMappingURL=main.css.map */
