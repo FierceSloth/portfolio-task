@@ -1,0 +1,90 @@
+.price {
+  min-width: 616px;
+}
+
+.container-price {
+  display: flex;
+  padding: 60px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.price__title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.price__cards-container {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.price__card {
+  border: 1px solid $dark;
+  display: flex;
+  width: 320px;
+  height: 500px;
+  padding: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card__text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card__list-item {
+  padding-left: 12px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: $dark;
+  }
+}
+
+.card__button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.card__description {
+  @extend %base-italic;
+}
+
+.card__btn {
+  padding: 18px 24px;
+  width: 272px;
+  background: $dark;
+
+  font-family: Oswald;
+  color: $white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  text-transform: uppercase;
+}
