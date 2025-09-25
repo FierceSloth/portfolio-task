@@ -34,6 +34,11 @@ input::placeholder {
   text-transform: uppercase;
 }
 
+input:focus {
+  border: 1px solid $accent;
+  outline: none;
+}
+
 .contact-btn {
-  min-width: 272px;
+  width: 200px;
 }

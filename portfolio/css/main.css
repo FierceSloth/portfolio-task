@@ -436,6 +436,13 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  transition: all 0.3s;
+}
+.price__card:hover {
+  border: 1px solid #FF3C3C;
+}
+.price__card:hover .card__btn {
+  background-color: #FF3C3C;
 }
 
 .card__text-container {
@@ -478,6 +485,7 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   padding: 18px 24px;
   width: 272px;
   background: #222222;
+  transition: all 0.3s;
   font-family: Oswald;
   color: white;
   font-size: 16px;
@@ -485,6 +493,9 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   font-weight: 400;
   line-height: 24px; /* 150% */
   text-transform: uppercase;
+}
+.card__btn:hover {
+  background-color: #FF3C3C;
 }
 
 .faq {
@@ -607,6 +618,37 @@ input::placeholder {
   text-transform: uppercase;
 }
 
+input:focus {
+  border: 1px solid #FF3C3C;
+  outline: none;
+}
+
 .contact-btn {
-  min-width: 272px;
+  width: 200px;
+}
+
+.container-footer {
+  padding: 37px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.footer__list {
+  display: flex;
+  gap: 40px;
+}
+
+.footer__list-link {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.footer__list-link:hover {
+  color: #FF3C3C;
 }/*# sourceMappingURL=main.css.map */
