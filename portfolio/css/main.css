@@ -54,6 +54,10 @@ select {
 
 /* =========== Fonts ============ */
 /* =========== Colors ============ */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Mulish;
   font-size: 16px;
@@ -473,4 +477,88 @@ h4 {
   font-weight: 400;
   line-height: 24px; /* 150% */
   text-transform: uppercase;
+}
+
+.faq {
+  min-height: 604px;
+}
+
+.container-faq {
+  color: white;
+  display: flex;
+  padding: 60px 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.faq__title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1 0 0;
+}
+
+.faq__accordion {
+  width: 680px;
+}
+
+details {
+  border-bottom: 1px solid white;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+details[open] summary::after {
+  content: "–";
+}
+
+.accordion-answer {
+  padding-bottom: 20px;
+  cursor: context-menu;
+}
+
+summary {
+  padding: 17.5px 0;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Oswald;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 140% */
+  text-transform: uppercase;
+}
+summary::marker {
+  content: "";
+}
+summary::after {
+  content: "+";
+  font-family: "Mulish";
+  font-size: 32px;
+  font-weight: normal;
+  transition: all 0.3s ease;
+}
+summary:hover {
+  color: #FF3C3C;
+}
+
+::details-content {
+  transition: height 0.5s ease, content-visibility 0.5s ease allow-discrete;
+  height: 0px;
+  overflow: clip;
+}
+
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+  [open]::details-content {
+    height: auto;
+  }
 }/*# sourceMappingURL=main.css.map */
