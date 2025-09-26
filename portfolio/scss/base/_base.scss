@@ -1,3 +1,11 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -19,6 +27,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
+  overflow: hidden;
 }
 
 p {
@@ -32,6 +41,16 @@ h1 {
   font-weight: 300;
   line-height: 132px; /* 113.793% */
   text-transform: uppercase;
+
+  @include media(1440px) {
+    @include fluidTable(font-size, 68, 116);
+    @include fluidTable(line-height, 80, 132);
+  }
+
+  @include media(760px) {
+    @include fluidTable(font-size, 56, 68);
+    @include fluidTable(line-height, 64, 80);
+  }
 }
 
 h2 {

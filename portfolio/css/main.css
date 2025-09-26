@@ -54,6 +54,14 @@ select {
 
 /* =========== Fonts ============ */
 /* =========== Colors ============ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -75,6 +83,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
+  overflow: hidden;
 }
 
 h1 {
@@ -84,6 +93,18 @@ h1 {
   font-weight: 300;
   line-height: 132px; /* 113.793% */
   text-transform: uppercase;
+}
+@media screen and (max-width: 1440px) {
+  h1 {
+    font-size: clamp(68px, 116px - (1435px - 100vw) / 13.8541666667, 116px);
+    line-height: clamp(80px, 132px - (1435px - 100vw) / 12.7884615385, 132px);
+  }
+}
+@media screen and (max-width: 760px) {
+  h1 {
+    font-size: clamp(56px, 68px - (1435px - 100vw) / 55.4166666667, 68px);
+    line-height: clamp(64px, 80px - (1435px - 100vw) / 41.5625, 80px);
+  }
 }
 
 h2 {
@@ -187,10 +208,55 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   color: white;
   text-transform: uppercase;
 }
+@media screen and (max-width: 770px) {
+  .header__list {
+    display: none;
+  }
+}
+
+.header__burger {
+  display: none;
+  width: 40px;
+  height: 50px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 20px 0;
+}
+.header__burger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  transition: 0.3s;
+}
+.header__burger span:nth-child(1) {
+  width: 12px;
+}
+.header__burger.active span:nth-child(1) {
+  width: 20px;
+  transform: rotate(45deg) translateY(5.5px);
+}
+.header__burger.active span:nth-child(2) {
+  transform: rotate(-45deg) translateY(-5.5px);
+}
+@media screen and (max-width: 770px) {
+  .header__burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+  }
+}
 
 .hero {
-  height: 862px;
+  height: clamp(758px, 862px - (1435px - 100vw) / 6.3942307692, 862px);
   display: block;
+}
+@media screen and (max-width: 710px) {
+  .hero {
+    height: 888px;
+  }
 }
 
 .container-hero {
@@ -201,10 +267,22 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   gap: 40px;
   color: white;
 }
+@media screen and (max-width: 770px) {
+  .container-hero {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 710px) {
+  .container-hero {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+}
 
 .hero__side__arrow {
   writing-mode: tb-rl;
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateX(-2px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,8 +292,18 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
 .hero__side__arrow span {
   display: block;
   width: 1px;
-  height: 550px;
+  height: clamp(432px, 550px - (1435px - 100vw) / 5.6355932203, 550px);
   background-color: white;
+}
+@media screen and (max-width: 770px) {
+  .hero__side__arrow {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 710px) {
+  .hero__side__arrow {
+    display: none;
+  }
 }
 
 .hero__main-container {
@@ -226,11 +314,16 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
 }
 
 .hero-main {
-  margin: 160px 0;
+  margin: 160px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 40px;
+}
+@media screen and (max-width: 710px) {
+  .hero-main {
+    margin-top: 60px;
+  }
 }
 
 .hero__stat-container {
@@ -239,6 +332,11 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
 }
 .hero__stat-container span {
   width: 27px;
+}
+@media screen and (max-width: 710px) {
+  .hero__stat-container {
+    gap: 58px;
+  }
 }
 
 .hero__stat-item {
@@ -253,6 +351,7 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
 .scroll__container {
   width: 120px;
   display: flex;
+  margin: 160px 0 0 0;
   gap: 8px;
 }
 .scroll__container path {
@@ -267,20 +366,34 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
 .scroll__container:hover .hero__scroll {
   color: #FF3C3C;
 }
+@media screen and (max-width: 710px) {
+  .scroll__container {
+    display: none;
+  }
+}
 
-.hero__second__img {
+.hero__second__photo-container {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1/1;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1250px) {
+  .hero__second__photo-container {
+    display: none;
+  }
 }
 
 .hero__second__img {
-  width: 220px;
-  height: 220px;
-  aspect-ratio: 1/1;
-  align-self: center;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.hero__main__container {
+.hero__main__photo-container {
   width: 280px;
   padding: 60px 0;
   display: flex;
@@ -288,12 +401,25 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   justify-content: space-between;
   align-items: end;
 }
+@media screen and (max-width: 710px) {
+  .hero__main__photo-container {
+    gap: 60px;
+    padding: 0 0;
+    align-self: end;
+  }
+}
 
-.hero__main__img img {
+.hero__main__photo-container img {
   width: 280px;
   height: auto;
   aspect-ratio: 3/4;
   align-self: stretch;
+}
+@media screen and (max-width: 710px) {
+  .hero__main__photo-container img {
+    width: 220px;
+    align-self: end;
+  }
 }
 
 .hero__intro {
@@ -425,6 +551,7 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   display: flex;
   gap: 40px;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .price__card {
