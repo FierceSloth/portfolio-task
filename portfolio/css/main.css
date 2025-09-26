@@ -437,6 +437,11 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   gap: 40px;
   padding: 60px 20px;
 }
+@media screen and (max-width: 1000px) {
+  .container-about {
+    flex-direction: column;
+  }
+}
 
 .about-block {
   width: 33.3%;
@@ -446,6 +451,14 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
 }
 .about-block img {
   width: 100%;
+}
+@media screen and (max-width: 1000px) {
+  .about-block {
+    width: 100%;
+  }
+  .about-block .about__third__block-img {
+    display: none;
+  }
 }
 
 .about__title-container {

@@ -6,6 +6,10 @@
   justify-content: space-between;
   gap: 40px;
   padding: 60px 20px;
+
+  @include media(1000px) {
+    flex-direction: column;
+  }
 }
 .about-block {
   width: 33.3%;
@@ -16,15 +20,17 @@
   img {
     width: 100%;
   }
+
+  @include media(1000px) {
+    width: 100%;
+    
+    .about__third__block-img {
+      display: none;
+    }
+  }
 }
 .about__title-container {
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-.about__first-block {
-}
-.about__second-block {
-}
-.about__third-block{
 }
