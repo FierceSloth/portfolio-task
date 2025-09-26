@@ -486,6 +486,14 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   color: white;
   margin-bottom: 12px;
 }
+.portfolio__title-container p {
+  width: 360px;
+}
+@media screen and (max-width: 390px) {
+  .portfolio__title-container p {
+    width: 340px;
+  }
+}
 
 .portfolio__slider-container {
   height: 654px;
@@ -498,6 +506,16 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   gap: 20px;
   align-items: center;
   transform: translateX(-88.57%);
+}
+@media screen and (max-width: 768px) {
+  .portfolio__slider {
+    transform: translateX(-216.5%);
+  }
+}
+@media screen and (max-width: 380px) {
+  .portfolio__slider {
+    transform: translateX(-485.3%);
+  }
 }
 
 .portfolio__slider-img:nth-child(1),

@@ -17,6 +17,16 @@
     color: $white;
     margin-bottom: 12px;
   }
+
+  p {
+    width: 360px;
+  }
+
+  @include media(390px) {
+    p {
+      width: 340px;
+    }
+  }
 }
 
 .portfolio__slider-container {
@@ -30,6 +40,15 @@
   gap: 20px;
   align-items: center;
   transform: translateX(-88.57%);
+
+  //! temporarily until part 2
+  @include media(768px) {
+    transform: translateX(-216.5%);
+  }
+
+  @include media(380px) {
+    transform: translateX(-485.3%);
+  }
 }
 
 .portfolio__slider-img {
