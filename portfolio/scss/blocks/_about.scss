@@ -7,7 +7,7 @@
   gap: 40px;
   padding: 60px 20px;
 
-  @include media(1000px) {
+  @include media(800px) {
     flex-direction: column;
   }
 }
@@ -21,7 +21,7 @@
     width: 100%;
   }
 
-  @include media(1000px) {
+  @include media(800px) {
     width: 100%;
     
     .about__third__block-img {

@@ -437,7 +437,7 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   gap: 40px;
   padding: 60px 20px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   .container-about {
     flex-direction: column;
   }
@@ -452,7 +452,7 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
 .about-block img {
   width: 100%;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   .about-block {
     width: 100%;
   }
@@ -476,6 +476,7 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  overflow: hidden;
 }
 
 .portfolio__title-container {
@@ -498,23 +499,25 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
 .portfolio__slider-container {
   height: 654px;
   display: flex;
-  overflow: hidden;
 }
 
 .portfolio__slider {
   display: flex;
   gap: 20px;
   align-items: center;
-  transform: translateX(-88.57%);
+  margin-left: -20px; /* равен padding контейнера */
+  margin-right: -20px;
+  width: calc(100% + 40px);
+  transform: translateX(-84.72%);
 }
 @media screen and (max-width: 768px) {
   .portfolio__slider {
-    transform: translateX(-216.5%);
+    transform: translateX(-202.6%);
   }
 }
 @media screen and (max-width: 380px) {
   .portfolio__slider {
-    transform: translateX(-485.3%);
+    transform: translateX(-450%);
   }
 }
 
@@ -560,7 +563,7 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
 }
 
 .price {
-  min-width: 616px;
+  min-height: 616px;
 }
 
 .container-price {
@@ -573,6 +576,7 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
 
 .price__title-container {
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 12px;
 }
@@ -581,8 +585,14 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   width: 100%;
   display: flex;
   gap: 40px;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 900px) {
+  .price__cards-container {
+    gap: 20px;
+  }
 }
 
 .price__card {

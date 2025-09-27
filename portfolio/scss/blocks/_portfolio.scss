@@ -7,7 +7,8 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-}
+  overflow: hidden;
+} 
 
 .portfolio__title-container {
   width: 360px;
@@ -32,22 +33,24 @@
 .portfolio__slider-container {
   height: 654px;
   display: flex;
-  overflow: hidden;
 }
 
 .portfolio__slider {
   display: flex;
   gap: 20px;
   align-items: center;
-  transform: translateX(-88.57%);
+  margin-left: -20px;  /* равен padding контейнера */
+  margin-right: -20px;
+  width: calc(100% + 40px);
+  transform: translateX(-84.72%);
 
   //! temporarily until part 2
   @include media(768px) {
-    transform: translateX(-216.5%);
+    transform: translateX(-202.6%);
   }
 
   @include media(380px) {
-    transform: translateX(-485.3%);
+    transform: translateX(-450%);
   }
 }
 
