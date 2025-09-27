@@ -9,6 +9,10 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 40px;
+
+  @include media(1150px) {
+    flex-direction: column;
+  }
 }
 
 .faq__title-container {
@@ -21,6 +25,10 @@
 
 .faq__accordion {
   width: 680px;
+
+  @include media(1150px) {
+    width: 100%;
+  }
 }
 
 details {

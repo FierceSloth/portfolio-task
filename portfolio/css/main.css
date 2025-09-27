@@ -505,7 +505,7 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   display: flex;
   gap: 20px;
   align-items: center;
-  margin-left: -20px; /* равен padding контейнера */
+  margin-left: -20px;
   margin-right: -20px;
   width: calc(100% + 40px);
   transform: translateX(-84.72%);
@@ -678,6 +678,11 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   justify-content: space-between;
   gap: 40px;
 }
+@media screen and (max-width: 1150px) {
+  .container-faq {
+    flex-direction: column;
+  }
+}
 
 .faq__title-container {
   display: flex;
@@ -689,6 +694,11 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
 
 .faq__accordion {
   width: 680px;
+}
+@media screen and (max-width: 1150px) {
+  .faq__accordion {
+    width: 100%;
+  }
 }
 
 details {
