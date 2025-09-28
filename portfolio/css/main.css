@@ -184,11 +184,35 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   line-height: 20px;
 }
 
-.header__list .list-link {
+.footer__list-link, summary, .header__list .list-link {
   transition: all 0.2s;
 }
-.header__list .list-link:hover {
-  color: #FF3C3C;
+@media (hover: hover) {
+  .footer__list-link:hover, summary:hover, .header__list .list-link:hover {
+    color: #FF3C3C;
+  }
+}
+@media (hover: none) {
+  .footer__list-link:active, summary:active, .header__list .list-link:active {
+    color: #FF3C3C;
+  }
+}
+
+.card__btn {
+  transition: all 0.2s;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .card__btn:hover {
+    color: #222222;
+    background-color: #FF3C3C;
+  }
+}
+@media (hover: none) {
+  .card__btn:active {
+    color: #222222;
+    background-color: #FF3C3C;
+  }
 }
 
 .container-header {
@@ -360,11 +384,13 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
 .scroll__container .hero__scroll {
   transition: color 0.2s;
 }
-.scroll__container:hover .scroll-path {
-  stroke: #FF3C3C;
-}
-.scroll__container:hover .hero__scroll {
-  color: #FF3C3C;
+@media (hover: hover) {
+  .scroll__container:hover .scroll-path {
+    stroke: #FF3C3C;
+  }
+  .scroll__container:hover .hero__scroll {
+    color: #FF3C3C;
+  }
 }
 @media screen and (max-width: 710px) {
   .scroll__container {
@@ -469,14 +495,15 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
 
 .portfolio {
   min-height: 794px;
+  overflow: hidden;
 }
 
 .container-portfolio {
+  overflow: visible;
   padding: 60px 20px;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  overflow: hidden;
 }
 
 .portfolio__title-container {
@@ -606,11 +633,23 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   align-items: flex-start;
   transition: all 0.3s;
 }
-.price__card:hover {
-  border: 1px solid #FF3C3C;
+@media (hover: hover) {
+  .price__card:hover {
+    border: 1px solid #FF3C3C;
+  }
+  .price__card:hover .card__btn {
+    background-color: #FF3C3C;
+    color: #222222;
+  }
 }
-.price__card:hover .card__btn {
-  background-color: #FF3C3C;
+@media (hover: none) {
+  .price__card:active {
+    border: 1px solid #FF3C3C;
+  }
+  .price__card:active .card__btn {
+    background-color: #FF3C3C;
+    color: #222222;
+  }
 }
 
 .card__text-container {
@@ -661,9 +700,6 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
   font-weight: 400;
   line-height: 24px; /* 150% */
   text-transform: uppercase;
-}
-.card__btn:hover {
-  background-color: #FF3C3C;
 }
 
 .faq {
@@ -740,9 +776,6 @@ summary::after {
   font-size: 32px;
   font-weight: normal;
   transition: all 0.3s ease;
-}
-summary:hover {
-  color: #FF3C3C;
 }
 
 ::details-content {
@@ -851,7 +884,4 @@ input:focus {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   transition: all 0.3s;
-}
-.footer__list-link:hover {
-  color: #FF3C3C;
 }/*# sourceMappingURL=main.css.map */

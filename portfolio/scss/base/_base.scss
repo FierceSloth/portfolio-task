@@ -125,16 +125,32 @@ h4 {
 %accent-text {
   transition: all 0.2s;
 
-  &:hover {
-    color: $accent;
+  @media (hover: hover) {
+    &:hover {
+      color: $accent;
+    }
+  }
+  @media (hover: none) {
+    &:active {
+      color: $accent;
+    }
   }
 }
 
 %accent-btn {
   transition: all 0.2s;
+  cursor: pointer;
 
-  &:hover {
-    color: $dark;
-    background-color: $accent;
+  @media (hover: hover) {
+    &:hover {
+      color: $dark;
+      background-color: $accent;
+    }
+  }
+  @media (hover: none) {
+    &:active {
+      color: $dark;
+      background-color: $accent;
+    }
   }
 }

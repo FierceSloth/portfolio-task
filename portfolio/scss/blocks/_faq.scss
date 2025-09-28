@@ -73,9 +73,7 @@ summary {
     transition: all 0.3s ease;
   }
 
-  &:hover {
-    color: $accent;
-  }
+  @extend %accent-text;
 }
 
 ::details-content {

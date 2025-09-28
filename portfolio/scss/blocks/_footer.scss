@@ -25,7 +25,5 @@
   
   transition: all 0.3s;
 
-  &:hover {
-    color: $accent;
-  }
+  @extend %accent-text;
 }
