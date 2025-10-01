@@ -528,11 +528,10 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
 
 .portfolio {
   min-height: 794px;
-  overflow: hidden;
 }
 
 .container-portfolio {
-  overflow: visible;
+  overflow: hidden;
   padding: 60px 20px;
   display: flex;
   flex-direction: column;
@@ -557,28 +556,46 @@ input::placeholder, .form-container input, .hero__intro, .hero__stat-text, p {
 }
 
 .portfolio__slider-container {
+  position: relative;
   height: 654px;
   display: flex;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 .portfolio__slider {
   display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
   gap: 20px;
   align-items: center;
-  margin-left: -20px;
-  margin-right: -20px;
   width: calc(100% + 40px);
-  transform: translateX(-84.72%);
 }
-@media screen and (max-width: 768px) {
-  .portfolio__slider {
-    transform: translateX(-202.6%);
+.portfolio__slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.slider-side {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  z-index: 100;
+}
+@media (hover: none) {
+  .slider-side {
+    display: none;
   }
 }
-@media screen and (max-width: 380px) {
-  .portfolio__slider {
-    transform: translateX(-450%);
-  }
+
+#slider-left {
+  left: 0;
+}
+
+#slider-right {
+  right: 0;
 }
 
 .portfolio__slider-img:nth-child(1),
