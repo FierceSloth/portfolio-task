@@ -47,7 +47,7 @@ input::placeholder {
   text-transform: uppercase;
 }
 
-input:focus {
+input:input {
   border: 1px solid $accent;
   outline: none;
 }
