@@ -116,6 +116,7 @@
             <p>Every shoot is a story. Here you’ll find portraits, love stories, family sessions, and more.</p>
           </div>
           <div class="portfolio__slider-container">
+            <div class="slider-side" id="slider-left"></div>
             <div class="portfolio__slider">
               <img class="portfolio__slider-img" src="./assets/img/portfolio/portfolio-1.png" alt="portfolio-photo">
               <img class="portfolio__slider-img" src="./assets/img/portfolio/portfolio-2.png" alt="portfolio-photo">
@@ -130,6 +131,7 @@
               <img class="portfolio__slider-img" src="./assets/img/portfolio/portfolio-11.png" alt="portfolio-photo">
               <img class="portfolio__slider-img" src="./assets/img/portfolio/portfolio-12.png" alt="portfolio-photo">
             </div>
+            <div class="slider-side" id="slider-right"></div>
           </div>
       </div>
     </section>
@@ -155,7 +157,7 @@
             </div>
             <div class="card__button-container">
               <p class="card__description">For short sessions and quick results</p>
-              <button class="card__btn">Book now</button>
+              <button class="card__btn card__btn-popup">Book now</button>
             </div>
           </div>
 
@@ -175,7 +177,7 @@
             </div>
             <div class="card__button-container">
               <p class="card__description">Perfect for couples, portraits, or lifestyle</p>
-              <button class="card__btn">Book now</button>
+              <button class="card__btn card__btn-popup">Book now</button>
             </div>
           </div>
 
@@ -196,7 +198,7 @@
             </div>
             <div class="card__button-container">
               <p class="card__description">For when you want to capture everything</p>
-              <button class="card__btn">Book now</button>
+              <button class="card__btn card__btn-popup">Book now</button>
             </div>
           </div>
 
@@ -217,7 +219,7 @@
             </div>
             <div class="card__button-container">
               <p class="card__description">Full-day or partial wedding coverage</p>
-              <button class="card__btn">Book now</button>
+              <button class="card__btn card__btn-popup">Book now</button>
             </div>
           </div>
         </div>
@@ -231,42 +233,42 @@
           <p>Everything You Wanted to Ask (and a Bit More)</p>
         </div>
         <div class="faq__accordion">
-          <details open>
+          <details id="details1">
             <summary>How do I book a shoot?</summary>
             <p class="accordion-answer">Super simple – just message me through any convenient platform (Instagram, Telegram, WhatsApp, or the contact form on this site). We’ll discuss your preferred date, city, and session type. Once confirmed, I’ll reserve the date for you and send over preparation tips.</p>
           </details>
 
-          <details>
+          <details id="details2">
             <summary>Can I choose the location myself?</summary>
             <p class="accordion-answer">Absolutely! If there’s a special place you love or have in mind — I’m happy to shoot there. If you’re unsure, I can suggest beautiful spots with great lighting and atmosphere, tailored to your vision and mood.</p>
           </details>
 
-          <details>
+          <details id="details3">
             <summary>How long does the shoot take?</summary>
             <p class="accordion-answer">That depends on the package you choose. On average, sessions last from 1 to 4 hours. We’ll plan the pace and type of shoot together — from relaxed city strolls and love stories to more dynamic or editorial sessions.</p>
           </details>
 
-          <details>
+          <details id="details4">
             <summary>When will I receive the photos?</summary>
             <p class="accordion-answer">You’ll receive your edited photos within 7–14 days. For event and wedding sessions — up to 30 days. I deliver them in a stylish online gallery, where you can download them in full quality or easily share with friends and family.</p>
           </details>
 
-          <details>
+          <details id="details5">
             <summary>Will you help me pose?</summary>
             <p class="accordion-answer">Definitely! I’ll guide you gently throughout the session — where to look, how to move, how to relax. The goal is to make you feel comfortable and natural. My approach is relaxed, and I’ll never force awkward poses. The result? Real, expressive, and beautiful photos.</p>
           </details>
 
-          <details>
+          <details id="details6">
             <summary>What should I wear?</summary>
             <p class="accordion-answer">After booking, I’ll send you a style guide with suggestions for colors, textures, and combinations. The most important thing is that you feel confident in your outfit. I’m also happy to help you coordinate looks or plan something cohesive for couples or groups.</p>
           </details>
 
-          <details>
+          <details id="details7">
             <summary>Do you retouch the photos?</summary>
             <p class="accordion-answer">Yes, all photos are color-corrected and lightly retouched. My editing style is clean and natural — no overdone filters or fake skin. Just you, at your best. Extra retouching is available upon request.</p>
           </details>
 
-          <details>
+          <details id="details8">
             <summary>Can I get the raw files?</summary>
             <p class="accordion-answer"> I don’t deliver RAW files. My work includes not only shooting, but also careful selection and editing to create a complete and polished result. You’ll receive only the best images, ready for printing, sharing, or publishing.</p>
           </details>
@@ -308,7 +310,23 @@
     </div>
   </footer>
 
+  <div class="popup__overlay"></div>
+  <div id="popup">
+    <div class="popup__close">
+      <span></span>
+      <span></span>
+    </div>
+    <form class="popup__form" type="reset">
+      <h3>Like my portfolio? Sign up for a shoot!</h3>
+      <input type="text" placeholder="your name">
+      <input type="tel" value="+1">
+      <button type="submit">book now</button>
+    </form>
+  </div>
+
+  <script src="./js/header.js"></script>
   <script src="./js/slider.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="./js/accordion.js"></script>
+  <script src="./js/popup.js"></script>
 </body>
 </html>
