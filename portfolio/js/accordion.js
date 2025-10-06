@@ -1,4 +1,4 @@
-const currentAccordId = localStorage.getItem("currentAccorId") || document.querySelector('details').id;
+const currentAccordId = sessionStorage.getItem("currentAccorId") || document.querySelector('details').id;
 
 document.querySelectorAll("details").forEach((other) => {
   other.removeAttribute("open");
@@ -11,7 +11,7 @@ document.querySelectorAll("details").forEach((el) => {
       document.querySelectorAll("details").forEach((other) => {
         if (other !== el) other.removeAttribute("open");
       });
-      localStorage.setItem("currentAccorId", el.id);
+      sessionStorage.setItem("currentAccorId", el.id);
     }
   });
 });

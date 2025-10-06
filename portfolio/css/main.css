@@ -570,6 +570,7 @@ input::-moz-placeholder {
   gap: 20px;
   align-items: center;
   width: calc(100% + 40px);
+  padding: 0 20px;
 }
 .portfolio__slider::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
