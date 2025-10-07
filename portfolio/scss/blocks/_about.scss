@@ -1,0 +1,36 @@
+.about {
+  min-height: 628px;
+}
+.container-about {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 20px;
+
+  @include media(800px) {
+    flex-direction: column;
+  }
+}
+.about-block {
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  img {
+    width: 100%;
+  }
+
+  @include media(800px) {
+    width: 100%;
+    
+    .about__third__block-img {
+      display: none;
+    }
+  }
+}
+.about__title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

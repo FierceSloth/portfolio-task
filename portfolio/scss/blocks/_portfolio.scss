@@ -1,0 +1,116 @@
+.portfolio {
+  min-height: 794px;
+}
+
+.container-portfolio {
+  overflow: hidden;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.portfolio__title-container {
+  max-width: 360px;
+  color: $white;
+
+  h2 {
+    color: $white;
+    margin-bottom: 12px;
+  }
+
+  p {
+    width: 360px;
+  }
+
+  @include media(390px) {
+    p {
+      width: 340px;
+    }
+  }
+}
+
+.portfolio__slider-container {
+  position: relative;
+  height: 654px;
+  display: flex;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.portfolio__slider {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  gap: 20px;
+  align-items: center;
+  width: calc(100% + 40px);
+  padding: 0 20px;
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+}
+
+.slider-side {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  z-index: 100;
+
+  @media (hover: none){
+    & {
+      display: none;
+    }
+  }
+}
+#slider-left {
+  left: 0;
+}
+#slider-right {
+  right: 0;
+}
+
+.portfolio__slider-img:nth-child(1),
+.portfolio__slider-img:nth-child(4),
+.portfolio__slider-img:nth-child(8),
+.portfolio__slider-img:nth-child(12) {
+  width: 400px;
+  height: 534px;
+}
+
+.portfolio__slider-img:nth-child(2),
+.portfolio__slider-img:nth-child(6),
+.portfolio__slider-img:nth-child(9) {
+  width: 220px;
+  height: 220px;
+}
+
+.portfolio__slider-img:nth-child(3),
+.portfolio__slider-img:nth-child(7),
+.portfolio__slider-img:nth-child(10),
+.portfolio__slider-img:nth-child(11) {
+  width: 280px;
+  height: 374px;
+}
+
+.portfolio__slider-img:nth-child(5) {
+  width: 280px;
+  height: 374px;
+  transform: translateY(-20px);
+}
+
+.portfolio__slider-img:nth-child(1),
+.portfolio__slider-img:nth-child(8) {
+  align-self: flex-end;
+}
+
+.portfolio__slider-img:nth-child(4),
+.portfolio__slider-img:nth-child(7),
+.portfolio__slider-img:nth-child(10),
+.portfolio__slider-img:nth-child(12) {
+  align-self: flex-start;
+}

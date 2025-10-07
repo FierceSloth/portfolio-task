@@ -1,0 +1,25 @@
+@mixin fluidTable($property, $min, $max) {
+  $coef: (1435 - 770) / ($max - $min);
+
+  #{$property}: clamp(
+    #{$min}px,
+    calc(#{$max}px - ((1435px - 100vw) / #{$coef})),
+    #{$max}px
+  );
+}
+
+@mixin fluidMobile($property, $min, $max) {
+  $coef: (765 - 382) / ($max - $min);
+
+  #{$property}: clamp(
+    #{$min}px,
+    calc(#{$max}px - ((765px - 100vw) / #{$coef})),
+    #{$max}px
+  );
+}
+
+@mixin media($width) {
+  @media screen and (max-width: $width) {
+    @content
+  }
+}
