@@ -1,0 +1,18 @@
+// Base
+
+@import "./base/reset";
+@import "./base/mixin";
+@import "./base/vars";
+@import "./base/base";
+
+// Blocks
+
+@import "./blocks/header";
+@import "./blocks/hero";
+@import "./blocks/about";
+@import "./blocks/portfolio";
+@import "./blocks/price";
+@import "./blocks/faq";
+@import "./blocks/form";
+@import "./blocks/footer";
+@import "./blocks/popup";
