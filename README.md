@@ -1,7 +1,7 @@
-# 🖼️ Portfolio Website  
+# 📸 Portfolio Website  
 🌐 [View the project](https://fiercesloth.github.io/portfolio-task/portfolio/)
 
-**Portfolio Website** is a responsive landing page created as part of [RS School Stage #1.](https://rs.school/)  
+**Portfolio Website** is a responsive landing page created as part of **[RS School](https://rs.school/) Stage#1**.  
 The project was built according to a **Figma design mockup**, using only **HTML, SCSS, and JavaScript**, without any frameworks or external libraries.
 
 ---
