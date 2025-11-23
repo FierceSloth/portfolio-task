@@ -1,4 +1,6 @@
 # 📸 Portfolio Website  
+<img width="1905" height="907" alt="image" src="https://github.com/user-attachments/assets/7edbef13-36f3-4a4a-a10d-85f50ee73e3c" />
+
 🌐 [View the project](https://fiercesloth.github.io/portfolio-task/portfolio/)
 
 **Portfolio Website** is a responsive landing page created as part of **[RS School](https://rs.school/) Stage#1**.  
